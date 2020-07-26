@@ -11,13 +11,12 @@ const Contenedor = styled.div`
   margin: 0 auto;
 `;
 
-const ContenedorFormulario = styled.form`
-  background-color: #fff;
+const ContenedorFormulario = styled.div`
+  background-color: #FFF;
   padding: 3rem;
 `;
 
 function App() {
-  const [cargando, guardarCargando] = useState(false);
 
   const [resumen, guardarResumen] = useState({
     cotizacion: 0,
@@ -27,6 +26,8 @@ function App() {
       plan: "",
     },
   });
+
+  const [cargando, guardarCargando] = useState(false);
 
   //Extraer datos
   const { cotizacion, datos } = resumen;
